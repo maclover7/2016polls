@@ -32,7 +32,7 @@ class Pollster < Sinatra::Base
   end
 
   get '/' do
-    @heading = "National"
+    @heading = 'National'
     @democratic_leader = HuffAPI.leader('national', 'democratic', 'primary')
     @democratic_standings = HuffAPI.standings('national', 'democratic', 'primary')
     @republican_leader = HuffAPI.leader('national', 'gop', 'primary')
@@ -43,13 +43,13 @@ class Pollster < Sinatra::Base
   get '/:state' do
     case params[:state]
     when 'ia', 'iowa'
-      @heading = "Iowa"
+      @heading = 'Iowa'
       @democratic_leader = HuffAPI.leader('iowa-presidential', 'democratic', 'primary')
       @democratic_standings = HuffAPI.standings('iowa-presidential', 'democratic', 'primary')
       @republican_leader = HuffAPI.leader('iowa-presidential', 'republican', 'primary')
       @republican_standings = HuffAPI.standings('iowa-presidential', 'republican', 'primary')
     when 'nh', 'new-hampshire'
-      @heading = "New Hampshire"
+      @heading = 'New Hampshire'
       @democratic_leader = HuffAPI.leader('new-hampshire-presidential', 'democratic', 'caucus')
       @democratic_standings = HuffAPI.standings('new-hampshire-presidential', 'democratic', 'caucus')
       @republican_leader = HuffAPI.leader('new-hampshire-presidential', 'republican', 'caucus')
