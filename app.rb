@@ -1,8 +1,9 @@
 require 'sinatra'
+require 'erb'
 
 # The app!
 class Pollster < Sinatra::Base
   get '/' do
-    'hello'
+    erb :home
   end
 end
