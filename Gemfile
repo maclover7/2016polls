@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-get 'httparty'
+gem 'httparty'
 gem 'json'
 gem 'rake'
 gem 'rubocop'
