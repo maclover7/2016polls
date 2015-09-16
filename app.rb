@@ -1,7 +1,8 @@
 require 'sinatra'
 
+# The app!
 class Pollster < Sinatra::Base
-  get "/" do
-    "hello"
+  get '/' do
+    'hello'
   end
 end
